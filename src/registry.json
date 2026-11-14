@@ -1,0 +1,15 @@
+{
+  "chain":  { "state": "stated", "name": "Solana", "network": "mainnet", "rpc": "https://solana-rpc.publicnode.com" },
+  "ca":     { "state": "absent", "value": null },
+  "x1":     { "state": "stated", "url": "https://x.com/Generosity" },
+  "x2":     { "state": "stated", "url": "https://x.com/GenerosityToken" },
+  "github": { "state": "absent", "url": null },
+  "market": {
+    "state": "stated",
+    "boostsUrl": "https://api.dexscreener.com/token-boosts/top/v1",
+    "tokenUrl": "https://api.dexscreener.com/tokens/v1/solana/",
+    "ownDexUrl": "https://api.dexscreener.com/latest/dex/tokens/",
+    "ownPumpUrl": "https://frontend-api.pump.fun/coins/",
+    "pollMs": 60000
+  }
+}

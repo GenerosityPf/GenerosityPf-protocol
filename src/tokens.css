@@ -1,0 +1,46 @@
+/* ==========================================================================
+   tokens.css — the ONLY file allowed to hold colour literals (palette rule).
+   Provenance (all sampled from pixels, nothing invented):
+   - brand/LOGO GENEROSITY PNG...png (RGBA, colortype 6, 2000x2000; 3,470,788 px
+     alpha 0 and pure black rgb(0,0,0); 502,692 opaque; 26,520 partial alpha):
+       --green        #02bc24  median of all opaque pixels
+       --green-deep   #00a317  5th-percentile luminance opaque pixel
+       --green-bright #05d434  75th-percentile luminance opaque pixel
+       --green-glow   #aef9c3  95th-percentile luminance opaque pixel (highlight)
+   - reference/SAMPUL GENEROSITY JPG.jpg.jpeg (1500x500 RGB banner):
+       --ink          #010100  median of dark wordmark pixels (37,759 px)
+       --paper        #fdfefe  median of the banner's top-left background
+   - brief: --pulse-mint #00ffcc (own-row pulse colour, stated in the build brief)
+   Every other tint below is a colour-mix of these tokens.
+   ========================================================================== */
+:root {
+  --green: #02bc24;
+  --green-deep: #00a317;
+  --green-bright: #05d434;
+  --green-glow: #aef9c3;
+  --ink: #010100;
+  --paper: #fdfefe;
+  --pulse-mint: #00ffcc;
+
+  --color-accent: var(--green);
+  --bg: var(--paper);
+  --bg-2: color-mix(in srgb, var(--green) 4%, var(--paper));
+  --bg-3: color-mix(in srgb, var(--green) 8%, var(--paper));
+  --line: color-mix(in srgb, var(--ink) 9%, var(--paper));
+  --line-2: color-mix(in srgb, var(--ink) 17%, var(--paper));
+  --ink-2: color-mix(in srgb, var(--ink) 80%, var(--paper));
+  --muted: color-mix(in srgb, var(--ink) 58%, var(--paper));
+  --faint: color-mix(in srgb, var(--ink) 42%, var(--paper));
+  --green-ink: color-mix(in srgb, var(--green-deep) 80%, var(--ink));
+  --mint: color-mix(in srgb, var(--green) 10%, var(--paper));
+  --mint-2: color-mix(in srgb, var(--green) 22%, var(--paper));
+  --down-bg: color-mix(in srgb, var(--ink) 8%, var(--paper));
+
+  /* radii (px) — values read from the reference stylesheet */
+  --r-card: 14px; --r-lg: 16px; --r-md: 10px; --r-sm: 8px; --r-xs: 6px; --r-tile: 22%;
+  --shadow: 0 1px 2px color-mix(in srgb, var(--ink) 5%, transparent), 0 4px 18px color-mix(in srgb, var(--ink) 5%, transparent);
+  --shadow-2: 0 12px 40px color-mix(in srgb, var(--ink) 12%, transparent);
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+}

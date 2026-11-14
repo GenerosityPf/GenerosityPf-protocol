@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generosity</title>
+<meta name="description" content="Generosity is a Solana community token built on one belief: kindness compounds. Follow the live Solana market right here.">
+<meta property="og:title" content="Generosity">
+<meta property="og:description" content="Kindness, compounding across Solana.">
+<meta property="og:image" content="assets/logo-512.png">
+<link rel="icon" type="image/svg+xml" sizes="32x32" href="favicon.svg">
+<link rel="apple-touch-icon" href="assets/logo-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;650;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=c0ff45dffa">
+<script>document.documentElement.classList.add('js');window.REGISTER={"chain":{"state":"stated","name":"Solana","network":"mainnet","rpc":"https://solana-rpc.publicnode.com"},"ca":{"state":"absent","value":null},"x1":{"state":"stated","url":"https://x.com/Generosity"},"x2":{"state":"stated","url":"https://x.com/GenerosityToken"},"github":{"state":"absent","url":null},"market":{"state":"stated","boostsUrl":"https://api.dexscreener.com/token-boosts/top/v1","tokenUrl":"https://api.dexscreener.com/tokens/v1/solana/","ownDexUrl":"https://api.dexscreener.com/latest/dex/tokens/","ownPumpUrl":"https://frontend-api.pump.fun/coins/","pollMs":60000}};</script>
+</head>
+<body id="top">
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo-96.png" alt="" width="34" height="34" id="brandLogo"><span>Generosity</span></a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#top" data-nav="top">Overview</a>
+      <a href="#market" data-nav="market">Market</a>
+      <a href="#values" data-nav="values">Values</a>
+    </nav>
+    <div class="hdr-right"><span id="social" style="display:contents"></span><button class="icon-btn burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="fill:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap cabar">
+    <button class="ca" id="ca" type="button" aria-disabled="true" aria-label="Token mint">
+      <span class="k">CA</span>
+      <span class="addr" id="caText" data-ca-exempt>Mint will be shown here once it is announced</span>
+      <span class="act" id="caAct"></span>
+    </button>
+  </div>
+
+  <div class="ticker" aria-label="Live Solana ticker" id="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
+
+  <section class="hero">
+    <div class="mesh" aria-hidden="true"><i class="m1" data-depth="0.15"></i><i class="m2" data-depth="0.25"></i><i class="m3" data-depth="0.35"></i></div>
+    <img class="ghost" src="assets/logo-512.png" alt="" aria-hidden="true" data-depth="0.5" width="460" height="460">
+    <i class="orb o1" aria-hidden="true" data-depth="0.9"></i><i class="orb o2" aria-hidden="true" data-depth="0.6"></i><i class="orb o3" aria-hidden="true" data-depth="1.2"></i>
+    <div class="wrap">
+      <div class="intro" data-reveal>
+        <h1>Kindness, compounding across Solana.</h1>
+        <p>Generosity is a community token with one belief at its centre: giving outperforms taking. Watch the wider Solana market move below while our own listing gets ready.</p>
+      </div>
+      <div class="hero-grid">
+        <article class="card now" data-spot data-reveal id="now">
+          <div class="now-top">
+            <span class="now-label"><span class="dot live"></span>Generosity, built for Solana</span>
+            <span class="pill green status" data-status><i class="dot live"></i><span>Connecting</span></span>
+          </div>
+          <div class="now-main">
+            <span id="nowLogo"></span>
+            <div style="min-width:0">
+              <h2 class="now-name" id="nowName">Generosity</h2>
+              <div class="now-meta"><span>Solana mainnet</span><span>Community token</span></div>
+            </div>
+          </div>
+          <p class="now-desc">Two open hands shaped like a heart is the whole brand. We want a crowd that shows up for each other, passes along lessons, and leaves each room warmer than it was found.</p>
+          <div class="now-links" id="nowLinks"></div>
+          <div>
+            <div class="bar-l"><span class="muted">Next market refresh</span><span class="mono" style="font-weight:600" id="nowLeft">–</span></div>
+            <div class="bar"><i id="nowBar"></i></div>
+          </div>
+          <div class="now-figs">
+            <div><div class="k">Price</div><div class="v" id="fPrice">· · · · ·</div><div class="s" id="fMcap">&nbsp;</div></div>
+            <div><div class="k">Change, 24h</div><div class="v" id="fChg">· · · · ·</div><div class="s">&nbsp;</div></div>
+            <div><div class="k">Volume, 24h</div><div class="v" id="fVol">· · · · ·</div><div class="s" id="fLiq">&nbsp;</div></div>
+          </div>
+        </article>
+        <div class="side">
+          <div class="card stats4" data-reveal>
+            <div class="stat"><div class="k">Tokens tracked</div><div class="v" id="sCount">–</div><div class="s">among Solana's most boosted</div></div>
+            <div class="stat"><div class="k">Combined volume</div><div class="v" id="sVol">–</div><div class="s">across tracked pairs, 24h</div></div>
+            <div class="stat"><div class="k">Combined liquidity</div><div class="v" id="sLiq">–</div><div class="s">sitting in those pools</div></div>
+            <div class="stat"><div class="k">Strongest mover</div><div class="v" id="sTop">–</div><div class="s" id="sTopS">&nbsp;</div></div>
+          </div>
+          <div class="card" data-reveal>
+            <div class="card-h"><h3>Hot right now</h3><a class="small green-link" href="#market" style="color:var(--green-ink);font-weight:600">Open market ↓</a></div>
+            <div class="next-list" id="hotList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="board-wrap" id="market">
+      <div class="board-h" data-reveal>
+        <div>
+          <h2>Solana market</h2>
+          <p>Ten leading boosted Solana tokens, pulled live and renewed once per sixty seconds. Row one is held for Generosity itself.</p>
+        </div>
+        <div class="toolbar">
+          <span class="pill green status" data-status><i class="dot live"></i><span>Connecting</span></span>
+          <div class="seg" id="sortSeg" role="group" aria-label="Sort">
+            <button type="button" data-sort="boost" class="on">Boosted</button>
+            <button type="button" data-sort="chg">Movers</button>
+            <button type="button" data-sort="vol">Volume</button>
+          </div>
+          <label class="search"><span class="sr">Filter tokens</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Filter by name or symbol" autocomplete="off"></label>
+        </div>
+      </div>
+      <div class="card mboard" data-reveal>
+        <div class="mscroll">
+          <div class="mtable" id="mtable">
+            <div class="mhead"><span class="r">#</span><span>Token</span><span class="r">Price</span><span class="r">24h</span><span class="r">Volume 24h</span><span class="r">Liquidity</span></div>
+            <div id="mrows"></div>
+          </div>
+        </div>
+        <p class="board-err hide" id="mErr" role="status"></p>
+      </div>
+      <div class="legend"><span><i style="background:var(--mint);box-shadow:inset 0 0 0 2px var(--green)"></i>Generosity</span><span><i style="background:var(--paper);box-shadow:inset 0 0 0 1px var(--line-2)"></i>Boosted Solana pair</span></div>
+    </section>
+
+    <section class="two" id="values">
+      <div class="card" data-reveal data-spot>
+        <div class="card-h"><h3>What guides us</h3></div>
+        <div class="princ">
+          <div class="row"><span class="place">01</span><div class="grow"><h3>Give before you ask</h3><p>The first move in any exchange is an offer. Help someone out, then see what comes back.</p></div></div>
+          <div class="row"><span class="place">02</span><div class="grow"><h3>Be easy to verify</h3><p>Claims anyone can verify on-chain beat claims that merely sound nice. We point at the ledger.</p></div></div>
+          <div class="row"><span class="place">03</span><div class="grow"><h3>Keep the tone warm</h3><p>Healthy communities are friendly to newcomers. No pile-ons, no gatekeeping, plenty of humour.</p></div></div>
+          <div class="row"><span class="place">04</span><div class="grow"><h3>Grow with nothing hidden</h3><p>Plans, mistakes and wins get shared with everyone holding a piece of this.</p></div></div>
+        </div>
+      </div>
+      <div class="card" data-reveal data-spot>
+        <div class="card-h"><h3>Why Solana</h3></div>
+        <div style="padding:6px 18px 18px">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span><b>Small gestures make sense.</b> Fees stay low enough that sending a little is still worth it.</span></div>
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span><b>An open ledger.</b> Anyone can read what happened and when, with no account required.</span></div>
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span><b>Tools people already own.</b> Common wallets and explorers work straight away.</span></div>
+          <div class="kv"><span>Network</span><span class="mono">Solana mainnet</span></div>
+          <div class="kv" style="border:0;padding-top:8px"><span>Mint</span><span class="mono" id="kvMint" data-ca-exempt>to be announced</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo-96.png" alt="" width="24" height="24"><span>Generosity</span></a>
+    <nav aria-label="Footer"><a href="#top">Overview</a><a href="#market">Market</a><a href="#values">Values</a></nav>
+    <span>Generosity is a community token and promises no returns. Nothing on this page is financial advice. Prices are supplied by DexScreener.</span>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js?v=c0ff45dffa"></script>
+</body>
+</html>
